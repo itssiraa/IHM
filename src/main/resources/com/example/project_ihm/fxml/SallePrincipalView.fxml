@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="sallePrincipalRoot" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_ihm.controllers.SallePrincipalController">
+
+   <children>
+      <!-- Zone 1 -->
+      <Circle fx:id="zone1" centerX="130" centerY="400" fill="TRANSPARENT" onDragDropped="#handleDragDropped1" onDragOver="#handleDragOver" radius="40" />
+
+      <!-- Zone 2 -->
+      <Circle fx:id="zone2" centerX="400" centerY="215" fill="TRANSPARENT" onDragDropped="#handleDragDropped2" onDragOver="#handleDragOver" radius="40" />
+
+      <!-- Zone 3 -->
+      <Circle fx:id="zone3" centerX="670" centerY="465" fill="TRANSPARENT" onDragDropped="#handleDragDropped3" onDragOver="#handleDragOver" radius="40" />
+
+      <ImageView fx:id="avatarImage" fitHeight="200.0" fitWidth="160.0" layoutX="320.0" layoutY="393.0" onDragDetected="#handleDragDetected" onMousePressed="#handleMousePressed" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../images/av.png" />
+         </image>
+      </ImageView>
+
+      <Label fx:id="statusLabel" alignment="CENTER" layoutX="250" layoutY="570" prefWidth="300" style="-fx-font-size: 15px; -fx-text-fill: red; -fx-font-weight: bold;" text="Glissez votre avatar sur une zone numérotée !">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

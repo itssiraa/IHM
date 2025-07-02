@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="gameMenuRoot" prefHeight="600" prefWidth="800" styleClass="game-menu" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_ihm.controllers.GameManager">
+
+    <children>
+        <Label layoutX="300" layoutY="20" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Menu des Jeux" />
+        
+        <VBox layoutX="100" layoutY="100" spacing="15" />
+
+        <Label layoutX="291.0" layoutY="88.0" style="-fx-font-size: 16px;" text="Choisissez l'ordre des Jeux" />
+
+        <Button fx:id="startGamesButton" 
+                layoutX="650" layoutY="520" 
+                prefHeight="40" prefWidth="100" 
+                text="Jouer"
+                onAction="#onStartGamesClicked" />
+        
+        <Button fx:id="closeButtonG" 
+                layoutX="770" layoutY="10" 
+                prefHeight="20" prefWidth="20" 
+                style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 12px;" 
+                text="✕"
+                onAction="#onCloseButtonGClicked" />
+                
+        <Button fx:id="footButton" layoutX="88.0" layoutY="175.0" prefHeight="40" prefWidth="150" text="Foot" />
+        <Button fx:id="quizButton" layoutX="550.0" layoutY="175.0" prefHeight="40" prefWidth="150" text="Quizzz" />
+        <Button fx:id="dragonButton" layoutX="109.0" layoutY="319.0" prefHeight="40" prefWidth="150" text="Jeu du dragon" />
+        <Button fx:id="slideSolveButton" layoutX="300.0" layoutY="436.0" prefHeight="40" prefWidth="150" text="Slide &amp; Solve" />
+        <Button fx:id="clicExpressButton" layoutX="550.0" layoutY="319.0" prefHeight="40" prefWidth="150" text="Clic Express" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,322 @@
+/* ===================================================================
+   Styles pour le projet IHM - Jeu Éducatif
+   =================================================================== */
+
+/* 1) Style pour l'écran principal (AccueilView.fxml) */
+#mainMenuRoot {
+    -fx-background-image: url('../images/background_main2.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+/* 2) Style pour la boîte de dialogue "Quitter" (QuitDialogView.fxml) */
+#quitDialogRoot {
+    /* Note: Si background_quit.png n'existe pas, créez-le ou utilisez une couleur */
+    /*-fx-background-image: url('../images/background_quit.png');*/
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Alternative si l'image n'existe pas */
+.quit-dialog {
+    -fx-background-color: linear-gradient(to bottom, #2e2e2e, #1a1a1a);
+}
+
+/* 3) Style pour le menu des jeux (GameMenuView.fxml) */
+#gameMenuRoot {
+    -fx-background-image: url('../images/background_games.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* 4) Style pour le choix du genre (ChooseGenderView.fxml) */
+#chooseGenderRoot {
+    -fx-background-image: url('../images/choose_gender_bg.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+#avatarListRoot {
+    -fx-background-image: url('../images/avatar_list_bg.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Alternative si l'image n'existe pas */
+.avatar-list {
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2c3e50);
+}
+
+/* ===================================================================
+   Styles communs pour les composants
+   =================================================================== */
+
+/* Style par défaut pour tous les boutons */
+.button {
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #333333;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* Effet hover pour tous les boutons */
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Effet pressed pour tous les boutons */
+.button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+/* Boutons spécifiques */
+#playButton {
+    -fx-background-color: #4CAF50;       /* Vert */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#playButton:hover {
+    -fx-background-color: #45a049;
+}
+
+#createAvatarButton {
+    -fx-background-color: #2196F3;       /* Bleu */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#createAvatarButton:hover {
+    -fx-background-color: #1976D2;
+}
+
+#quitButton {
+    -fx-background-color: #E53935;       /* Rouge */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#quitButton:hover {
+    -fx-background-color: #D32F2F;
+}
+
+#startGamesButton {
+    -fx-background-color: #2196F3;       /* Bleu */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#startGamesButton:hover {
+    -fx-background-color: #1976D2;
+}
+
+#validateAvatarButton {
+    -fx-background-color: #673AB7;       /* Violet */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+#validateAvatarButton:hover {
+    -fx-background-color: #5E35B1;
+}
+
+#retourAvatarButton{
+    -fx-background-color: #673AB7;       /* Violet */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+#onretourAvatarButtonClicked:hover {
+    -fx-background-color: #5E35B1;
+}
+
+
+/* Boutons de fermeture (X) */
+#closeButton, #closeButtonG, #closeAvatarList {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+#closeButton:hover, #closeButtonG:hover, #closeAvatarList:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 3px;
+}
+
+/* Boutons de dialogue */
+#yesButton, #noButton {
+    -fx-min-width: 80px;
+}
+
+#yesButton {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+#yesButton:hover {
+    -fx-background-color: #45a049;
+}
+
+#noButton {
+    -fx-background-color: #757575;
+    -fx-text-fill: white;
+}
+
+#noButton:hover {
+    -fx-background-color: #616161;
+}
+
+/* Style pour les RadioButtons */
+.radio-button {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.radio-button:selected {
+    -fx-text-fill: #2196F3;
+    -fx-font-weight: bold;
+}
+
+/* Style pour les labels */
+.label {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Labels de titre */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Styles pour les boutons de jeux */
+#footButton, #quizButton, #dragonButton, #slideSolveButton, #clicExpressButton {
+    -fx-background-color: #607D8B;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-min-width: 150px;
+    -fx-min-height: 40px;
+}
+
+#footButton:hover, #quizButton:hover, #dragonButton:hover, 
+#slideSolveButton:hover, #clicExpressButton:hover {
+    -fx-background-color: #455A64;
+}
+
+/* Bouton sélectionné dans le menu des jeux */
+.game-button-selected {
+    -fx-background-color: #4CAF50 !important;
+    -fx-border-color: #2E7D32;
+    -fx-border-width: 2px;
+}
+
+/* Conteneurs */
+.vbox {
+    -fx-spacing: 15px;
+    -fx-padding: 20px;
+}
+
+.hbox {
+    -fx-spacing: 20px;
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+}
+
+/* Images dans la sélection d'avatar */
+.avatar-image {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.avatar-image:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 3);
+}
+
+/* Ajustements pour la lisibilité sur fond sombre */
+.white-text {
+    -fx-text-fill: white;
+}
+
+.dark-background {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+}
+
+
+#chooseHairstyleRoot{
+    -fx-background-image: url('../images/background_main2.png');
+
+}
+
+.elemlistavat{
+    -fx-border-color:  #333333;
+    border-color: #333333;
+    -fx-border-radius: 5%;
+    border-radius: 5%;
+    padding: 5px;
+    -fx-padding: 5px;
+
+}
+
+
+#sallePrincipalRoot {
+    -fx-background-image: url('../images/SallePrincipale.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+
+#avatarImage {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 5);
+}
+
+#avatarImage:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 15, 0, 0, 7);
+}
+
+
+#Niveau1Root{
+    -fx-background-image: url('../images/terrain.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+
+#cle {
+    -fx-background-image: url('../images/cle.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+
+#tresor{
+    -fx-background-image: url('../images/cle.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}

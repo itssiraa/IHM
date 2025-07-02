@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:id="mainMenuRoot"
+            fx:controller="com.example.project_ihm.controllers.GameManager"
+            prefWidth="800" prefHeight="600"
+            stylesheets="@../css/style.css">
+
+    <children>
+        <VBox alignment="CENTER" layoutX="300" layoutY="200" spacing="20">
+            <children>
+                <Button fx:id="playButton"
+                        onAction="#onPlayButtonClicked"
+                        prefHeight="50" prefWidth="200"
+                        text="Jouer"/>
+                <Button fx:id="createAvatarButton"
+                        onAction="#onCreateAvatarButtonClicked"
+                        prefHeight="50" prefWidth="200"
+                        text="Créer votre avatar"/>
+                <Button fx:id="quitButton"
+                        onAction="#onQuitButtonClicked"
+                        prefHeight="50" prefWidth="200"
+                        text="Quitter"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="tresor" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_ihm.controllers.TresorController">
+   <children>
+      <ImageView fitHeight="255.0" fitWidth="304.0" layoutX="395.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/IMG_8571.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="playButton" layoutX="207.0" layoutY="479.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="115.0" text="Rejouer" />
+      <Button fx:id="quitButton" layoutX="463.0" layoutY="474.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="115.0" text="Quitter le jeux" />
+      <Label layoutX="256.0" layoutY="26.0" prefHeight="92.0" prefWidth="291.0" text="    BRAVO !">
+         <font>
+            <Font name="Academy Engraved LET Plain:1.0" size="55.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

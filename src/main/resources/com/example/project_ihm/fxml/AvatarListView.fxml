@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="avatarListRoot" prefHeight="600" prefWidth="800" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_ihm.controllers.GameManager">
+
+    <fx:define>
+        <ToggleGroup fx:id="avatarToggle" />
+    </fx:define>
+
+    <children>
+        <Label layoutX="300" layoutY="20" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Liste des avatars" />
+
+        <VBox layoutX="196.0" layoutY="138.0" prefHeight="280.0" prefWidth="428.0" spacing="20">
+            <children>
+                <!-- Avatar par défaut (toujours affiché en premier) -->
+                <HBox alignment="CENTER_LEFT" spacing="20" styleClass="elemlistavat">
+                    <children>
+                        <RadioButton fx:id="avatarDefaultRadio" selected="true">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="avatarToggle" />
+                     </toggleGroup></RadioButton>
+                        <ImageView fx:id="avatarDefaultImage" fitHeight="80" fitWidth="80" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/defaultAvatar.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="avatarDefaultLabel" style="-fx-font-size: 16px;" text="Avatar par défaut" />
+                    </children>
+                    <padding>
+                        <Insets bottom="5" left="10" right="10" top="5" />
+                    </padding>
+                </HBox>
+
+                <!-- Avatar personnalisé 1 (caché par défaut) -->
+                <HBox fx:id="avatar1Box" alignment="CENTER_LEFT" managed="false" spacing="20" styleClass="elemlistavat" visible="false">
+                    <children>
+                        <RadioButton fx:id="avatar1Radio" toggleGroup="$avatarToggle" />
+                        <ImageView fx:id="avatar1Image" fitHeight="80" fitWidth="80" preserveRatio="true" />
+                        <Label fx:id="avatar1Label" style="-fx-font-size: 16px;" text="Avatar 1" />
+                    </children>
+                    <padding>
+                        <Insets bottom="5" left="10" right="10" top="5" />
+                    </padding>
+                </HBox>
+
+                <!-- Avatar personnalisé 2 (caché par défaut) -->
+                <HBox fx:id="avatar2Box" alignment="CENTER_LEFT" managed="false" spacing="20" styleClass="elemlistavat" visible="false">
+                    <children>
+                        <RadioButton fx:id="avatar2Radio" toggleGroup="$avatarToggle" />
+                        <ImageView fx:id="avatar2Image" fitHeight="80" fitWidth="80" preserveRatio="true" />
+                        <Label fx:id="avatar2Label" style="-fx-font-size: 16px;" text="Avatar 2" />
+                    </children>
+                    <padding>
+                        <Insets bottom="5" left="10" right="10" top="5" />
+                    </padding>
+                </HBox>
+
+            </children>
+        </VBox>
+
+        <Button fx:id="validateAvatarButton" layoutX="653.0" layoutY="502.0" onAction="#onValidateAvatarButtonClicked" text="Valider" />
+
+        <Button fx:id="closeAvatarList" layoutX="770" layoutY="10" onAction="#onCloseAvatarListClicked" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 12px;" text="✕" />
+      <Button fx:id="retourAvatarButton" layoutX="654.0" layoutY="551.0" mnemonicParsing="false" onAction="#onretourAvatarButtonClicked" text="Retour" />
+    </children>
+</AnchorPane>

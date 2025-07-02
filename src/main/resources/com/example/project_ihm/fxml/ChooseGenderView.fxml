@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="chooseGenderRoot" prefHeight="600" prefWidth="800" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_ihm.controllers.GameManager">
+    <fx:define>
+        <ToggleGroup fx:id="genderToggle" />
+    </fx:define>
+
+    <children>
+        <Label layoutX="277.0" layoutY="73.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Quel est votre genre ?" />
+
+        <VBox layoutX="261.0" layoutY="140.0" prefHeight="320.0" prefWidth="278.0" spacing="20">
+            <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/homme.png" />
+                     </image>
+                  </ImageView>
+                      <RadioButton fx:id="maleRadio" text="Homme">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderToggle" />
+                     </toggleGroup>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/femme.png" />
+                     </image>
+                  </ImageView>
+                      <RadioButton fx:id="femaleRadio" text="Femme" toggleGroup="$genderToggle" />
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+
+        <Button fx:id="nextButton" layoutX="367.0" layoutY="498.0" onAction="#onNextClicked" text="Suivant" />
+    </children>
+</AnchorPane>
